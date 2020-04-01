@@ -60,7 +60,7 @@ $.ajax({
         for (var i = 0; i < covidObject.length; i++){
             //  console.log(covidObject[i].name);
              var country = covidObject[i].name;
-             if (userInput === country){
+             if (userInput.toUpperCase() === country.toUpperCase()){
                  countryName.append("h2");
                  countryName.text(country);
                  countryCases.text("Confirmed Cases: " + covidObject[i].latest_data.confirmed);
