@@ -19,9 +19,7 @@ var countryDeaths = $("#countryDeaths");
 var countryCritical = $("#countryCritical");
 var countryRecovered = $("#countryRecovered");
 
-function clear(){
-    countryInput.empty();
-}
+
 
 //ajax call to get covid API response
 $.ajax({
@@ -67,7 +65,7 @@ $.ajax({
                  countryDeaths.text("Total Deaths: " + covidObject[i].latest_data.deaths);
                  countryCritical.text("Critical Cases: " + covidObject[i].latest_data.critical);
                  countryRecovered.text("People Recovered: " + covidObject[i].latest_data.recovered);
-                 clear();
+                 
              }
         
            
