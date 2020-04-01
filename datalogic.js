@@ -19,6 +19,10 @@ var countryDeaths = $("#countryDeaths");
 var countryCritical = $("#countryCritical");
 var countryRecovered = $("#countryRecovered");
 
+function clear(){
+    countryInput.empty();
+}
+
 //ajax call to get covid API response
 $.ajax({
     url: queryURL,
@@ -50,10 +54,9 @@ $.ajax({
     recovered.append("People Recovered: " + globalRecovered);
 
     //click event to capture input data
-    searchButton.click(function(){
+    searchButton.on("click", function(){
         console.log("it works");
         userInput = countryInput.val();
-        console.log(userInput);
         for (var i = 0; i < covidObject.length; i++){
             //  console.log(covidObject[i].name);
              var country = covidObject[i].name;
@@ -64,11 +67,15 @@ $.ajax({
                  countryDeaths.text("Total Deaths: " + covidObject[i].latest_data.deaths);
                  countryCritical.text("Critical Cases: " + covidObject[i].latest_data.critical);
                  countryRecovered.text("People Recovered: " + covidObject[i].latest_data.recovered);
+                 clear();
              }
+        
            
         }
-
+       
     })
+    
+
     
 })
 
