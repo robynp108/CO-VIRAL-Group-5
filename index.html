@@ -6,77 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+    .hero {
+    background-image: url('./Assets/COVID19.jpg');
+    background-size: cover;
+    }
+    
+    </style>
     <title>CO-VIRAL Home</title>
 </head>
 <section>
-    <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <span style="text-align: end;">CO-VIRAL: COVID-19</span>
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a class="navbar-item is-active">
-                                Home
-                            </a>
-                            <a class="navbar-item">
-                                What You Need to Know
-                            </a>
-                            <a class="navbar-item">
-                                Top Articles
-                            </a>
-                            <span class="navbar-item">
-                                <a class="button is-primary is-inverted">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>Resources</span>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    <section class="hero is-medium has-bg-img has-text-white">
 
         <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
+        <div class="hero-body has-text-right has-text-white">
+            <div class="container">
+                <h1 class="title has-text-white is-size-1">
                     CO-VIRAL
                 </h1>
-                <h2 class="subtitle">
+                <h2 class="subtitle has-text-white is-size-4">
                     Your One Stop App for Everything COVID-19
                 </h2>
+                <button href='/index.html' type="button" class="button is-info is-light is-medium"><b>HOME</b></button>
             </div>
         </div>
 
         <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
-            <nav class="tabs">
+            <nav class="tabs is-white">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>OVERVIEW</a></li>
-                        <li><a>FACTS</a></li>
-                        <li><a href="./currentData.html">CURRENT DATA</a></li>
+                        <li class="has-text-white"><a>OVERVIEW</a></li>
+                        <li><a>CURRENT DATA</a></li>
                         <li><a>ARTICLES</a></li>
-                        <li><a href="./news.html">NEWS</a></li>
-                        <li><a>Resources</a></li>
+                        <li><a>FACTS</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
+    <br>
 
     <section>
         <section class="section">
