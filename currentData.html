@@ -11,21 +11,26 @@
 </head>
 
 <body>
-    <section class="section">
-        <div class="container">
+    <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
             <h1 class="title">
-                Current Data
+              Covid-19 Data
             </h1>
-            <p class="subtitle">
+            <h2 class="subtitle">
                 How the pandemic is progressing in different locations
-            </p>
+            </h2>
+          </div>
         </div>
+      </section>
 
+
+        
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-12">
                 <div class="tile">
                     <div class="tile is-parent">
-                        <article class="tile is-child box has-background-grey-lighter">
+                        <article class="tile is-child box">
                             <strong>Global Data:</strong>
                             <p id="cases"></p>
                             <p id="deaths"></p>
@@ -35,10 +40,10 @@
                     </div>
 
                     <div class="tile is-parent is-vertical ">
-                        <article class="tile is-child box " id="countrySearch">
+                        <article class="tile is-child box" id="countrySearch">
                             Search Data by Country
                             <input class="input is-info" type="text" placeholder="Country Name" id="countryInput">
-                            <button class="button is-light" id="searchButton">Search</button>
+                            <button class="button is-info" id="searchButton">Search</button>
                         </article>
                         <article class="tile is-child box">
                             <p id="countryName"></p>
@@ -52,7 +57,7 @@
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                      Four
+                      <h1 class="title">Comparing Past Pandemics</h1>
                     </article>
                 </div>
             </div>
