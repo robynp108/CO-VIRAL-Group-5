@@ -140,10 +140,10 @@ function homePageWho() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var title = response.articles[0].title.slice(0, 35) + "...";
+        var title = response.articles[3].title.slice(0, 35) + "...";
         var upTitle = title.toUpperCase();
-        var url = response.articles[0].url;
-        var summary = response.articles[0].description;
+        var url = response.articles[3].url;
+        var summary = response.articles[3].description;
         $("#homeTitleWho").html('<p class="subtitle"> <a href="'+url+'" target="_blank">'+upTitle+'</a></p>');
         $("#homeSummaryWho").html(summary);
 
