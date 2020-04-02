@@ -16,6 +16,7 @@ var countryCases = $("#countryCases");
 var countryDeaths = $("#countryDeaths");
 var countryCritical = $("#countryCritical");
 var countryRecovered = $("#countryRecovered");
+var USA = "United States"
 var allCountries = [ 
     {"name": "Afghanistan", "code": "AF"}, 
     {"name": "land Islands", "code": "AX"}, 
@@ -333,7 +334,16 @@ function searchCovidCaseByCountry(userInput){
              countryCritical.text("Critical Cases: " + covidObject[i].latest_data.critical);
              countryRecovered.text("People Recovered: " + covidObject[i].latest_data.recovered);
              
+             
          }
+         //hard coded the search input to accept "United States" as an input to display USA data
+         if (userInput.toUpperCase() === USA.toUpperCase()) {
+             countryName.text(USA);
+             countryCases.text("Confirmed Cases: " + covidObject[213].latest_data.confirmed);
+             countryDeaths.text("Total Deaths: " + covidObject[213].latest_data.deaths);
+             countryCritical.text("Critical Cases: " + covidObject[213].latest_data.critical);
+             countryRecovered.text("People Recovered: " + covidObject[213].latest_data.recovered);
+        }
          
 
        
