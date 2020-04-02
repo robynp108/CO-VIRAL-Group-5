@@ -1,11 +1,16 @@
-var memeUrl = "https://api.giphy.com/v1/gifs/random?api_key=Z1f6UIRsEi27RLQEhLl8rRS14P6LALOH&tag=covid19&rating=g&limit=1";
+var search_term = "coronavirus%20quarantine";
+var apikey = "C1ST54OS8S75";
+var lmt = 1;
+
+var memeUrl = "https://api.tenor.com/v1/random?q=" + search_term + "&key=" +
+apikey + "&limit=" + lmt + "&contentfilter=high&locale=en_US";
 
 $.ajax({
     url: memeUrl,
     method: "GET"
 }).then(function (response) {
     console.log(response);
-    var imageUrl = response.data.images.fixed_height.url;
+    var imageUrl = response.results[0].media[0].gif.url;
     console.log(imageUrl);
     var memeImage = $("<img>");
 
