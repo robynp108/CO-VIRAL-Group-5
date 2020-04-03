@@ -140,13 +140,20 @@ function homePageWho() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var title = response.articles[3].title.slice(0, 35) + "...";
+        var title = response.articles[3].title.slice(0, 30) + "...";
         var upTitle = title.toUpperCase();
         var url = response.articles[3].url;
         var summary = response.articles[3].description;
+        summary = summary.slice(0,190) + "...";
+        var img = response.articles[numCdc].urlToImage;
         $("#homeTitleWho").html('<p class="subtitle"> <a href="'+url+'" target="_blank">'+upTitle+'</a></p>');
         $("#homeSummaryWho").html(summary);
-
+        if (img !== null) {
+            $("#whoThumbnail").attr("src", img);
+        }
+        else {
+            $("#whoThumbnail").attr("src", defaultImages[0]);
+        }
     });
 }
 function homePageNih() {
@@ -156,12 +163,20 @@ function homePageNih() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var title = response.articles[0].title.slice(0, 70) + "...";
+        var title = response.articles[0].title.slice(0, 30) + "...";
         var upTitle = title.toUpperCase();
         var url = response.articles[0].url;
         var summary = response.articles[0].description;
+        summary = summary.slice(0,190) + "...";
+        var img = response.articles[numCdc].urlToImage;
         $("#homeTitleNih").html('<p class="subtitle"> <a href="'+url+'" target="_blank">'+upTitle+'</a></p>');
         $("#homeSummaryNih").html(summary);
+        if (img !== null) {
+            $("#nihThumbnail").attr("src", img);
+        }
+        else {
+            $("#nihThumbnail").attr("src", defaultImages[1]);
+        }
     });
 }
 function homePageCdc() {
@@ -171,12 +186,20 @@ function homePageCdc() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var title = response.articles[0].title.slice(0, 70) + "...";
+        var title = response.articles[0].title.slice(0, 30) + "...";
         var upTitle = title.toUpperCase();
         var url = response.articles[0].url;
         var summary = response.articles[0].description;
+        summary = summary.slice(0,190) + "...";
+        var img = response.articles[numCdc].urlToImage;
         $("#homeTitleCdc").html('<p class="subtitle"> <a href="'+url+'" target="_blank">'+upTitle+'</a></p>');
         $("#homeSummaryCdc").html(summary);
+        if (img !== null) {
+            $("#cdcThumbnail").attr("src", img);
+        }
+        else {
+            $("#cdcThumbnail").attr("src", defaultImages[2]);
+        }
     });
 }
 

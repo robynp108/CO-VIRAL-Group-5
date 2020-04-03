@@ -13,7 +13,7 @@
     background-image: url('./Assets/COVID19.jpg');
     background-size: cover;
     }
-    .homepageBody {
+    section {
         background-color: white;
     }
 
@@ -28,6 +28,23 @@
 </head>
 <section>
     <section class="hero is-primary is-medium">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <span style="text-align: end;">CO-VIRAL: COVID-19</span>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body has-text-right has-text-white">
@@ -43,16 +60,19 @@
         </div>
 
     </section>
-</section>
     <br>
 
-    <section class="homepageBody">
+    <section>
         <section class="section">
 
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">CDC</p>
+                        <figure class="image is-3by1">
+                            <img id="cdcThumbnail" src="https://bulma.io/images/placeholders/480x480.png"
+                                alt="Placeholder image">
+                        </figure>
                         <p class="subtitle" id="homeTitleCdc"> <a href="" target="_blank" id="cdcLink">TOP HEADLINE</a></p>
                         <div class="content">
                             <p id="homeSummaryCdc">Article snippet.</p>
@@ -64,6 +84,10 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">WHO</p>
+                        <figure class="image is-3by1">
+                            <img id="whoThumbnail" src="https://bulma.io/images/placeholders/480x480.png"
+                                alt="Placeholder image">
+                        </figure>
                         <p class="subtitle" id="homeTitleWho"> <a href="" target="_blank" id="whoLink">TOP HEADLINE</a></p>
                         <div class="content">
                             <p id="homeSummaryWho">Article snippet.</p>
@@ -75,6 +99,10 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">NIH</p>
+                        <figure class="image is-3by1">
+                            <img id="nihThumbnail" src="https://bulma.io/images/placeholders/480x480.png"
+                                alt="Placeholder image">
+                        </figure>
                         <p class="subtitle" id="homeTitleNih"> <a href="" target="_blank" id="nihLink">TOP HEADLINE</a></p>
                         <div class="content">
                             <p id="homeSummaryNih">Article snippet.</p>
@@ -110,7 +138,7 @@
                             <article class="tile is-child box">
                                 <p class="title">VIRAL MEMES</p>
                                 <p class="subtitle">A DOSE OF MEMES TO BRIGHTEN YOUR DAY</p>
-                                <figure class="image is-4by3 meme">
+                                <figure class="image is-4by3" class="meme">
                                 </figure>
                                 <img src="./Assets/tenorLogo.png" alt="Tenor logo" style="width:100px;height:25px"/>
                             </article>
@@ -210,6 +238,7 @@
         </div>
     </footer>
     </body>
+        </section>
     </section>
 </section>
 <script src="NewsAPI.js"></script>
