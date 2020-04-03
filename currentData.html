@@ -5,27 +5,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Current Data</title>
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet"/>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .hero {
+        background-image: url('./Assets/COVID19.jpg');
+        background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Current Data
-            </h1>
-            <p class="subtitle">
-                How the pandemic is progressing in different locations
-            </p>
+
+   <!-- <div class="container is-fluid"> -->
+    <section class="hero is-medium has-bg-img has-text-white">
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body has-text-right has-text-white">
+            <div class="container">
+                <h1 class="title has-text-white is-size-1">
+                    CO-VIRAL
+                </h1>
+                <h2 class="subtitle has-text-white is-size-4">
+                    Your One Stop App for Everything COVID-19
+                </h2>
+            </div>
         </div>
 
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs is-white">
+                <div class="container">
+                    <ul>
+                        <li class="has-text-white"><a>OVERVIEW</a></li>
+                        <li><a>CURRENT DATA</a></li>
+                        <li><a>ARTICLES</a></li>
+                        <li><a>FACTS</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <br>
+    <!-- <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Covid-19 Data
+            </h1>
+            <h2 class="subtitle">
+                How the pandemic is progressing in different locations
+            </h2>
+          </div>
+        </div>
+      </section> -->
+
+
+        
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-12">
                 <div class="tile">
                     <div class="tile is-parent">
-                        <article class="tile is-child box has-background-grey-lighter">
+                        <article class="tile is-child box">
                             <strong>Global Data:</strong>
                             <p id="cases"></p>
                             <p id="deaths"></p>
@@ -35,10 +77,10 @@
                     </div>
 
                     <div class="tile is-parent is-vertical ">
-                        <article class="tile is-child box " id="countrySearch">
+                        <article class="tile is-child box" id="countrySearch">
                             Search Data by Country
                             <input class="input is-info" type="text" placeholder="Country Name" id="countryInput">
-                            <button class="button is-light" id="searchButton">Search</button>
+                            <button class="button is-info" id="searchButton">Search</button>
                         </article>
                         <article class="tile is-child box">
                             <p id="countryName"></p>
@@ -51,9 +93,78 @@
 
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box">
-                      Four
+                    <article class="tile is-child box" id="countryChart">
+                      <h1 class="title">Pandemic Comparison</h1>
+                      <div class="chart" style="position: relative; height:80vh; width:100vw">
+                        <div id="container" style="width: 100%; height: 100%"></div>
+                      </div>
+                        <!-- <div class="card" style ="width:350px;">
+                            <div class="card-content">
+                            <p class="is-size-1">
+                                Black Death (Bubonic Plague):
+                                1347-1351
+                                200M Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 200px">
+                            <div class="card-content">
+                            <p class="is-size-3">
+                                Small Pox:
+                                1520
+                                56M Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 250px">
+                            <div class="card-content">
+                            <p class="is-size-4">
+                                Spanish Flu:
+                                1918-1919
+                                40-50M Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 250px">
+                            <div class="card-content">
+                            <p class="is-size-4">
+                                Hong Kong Flu:
+                                1968-1970
+                                1M Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 250px">
+                            <div class="card-content">
+                            <p class="is-size-4">
+                                Swine Flu (H1N1):
+                                2009-2010
+                                200k Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 250px">
+                            <div class="card-content">
+                            <p class="is-size-4">
+                                Ebola:
+                                2014-2016
+                                11.3k Deaths 
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card" style ="width:250px; height: 250px">
+                            <div class="card-content">
+                            <p class="is-size-4">
+                                SARS:
+                                2002-2003
+                                770 Deaths 
+                            </p>
+                            </div>
+                        </div> -->
                     </article>
+                   
+                  
+
                 </div>
             </div>
 
@@ -61,7 +172,6 @@
     </section>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <script src="datalogic.js"></script>
 </body>
 
