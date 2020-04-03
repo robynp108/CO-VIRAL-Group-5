@@ -340,8 +340,9 @@ function searchCovidCaseByCountry(userInput){
 
 
              
-     
-         //hard coded the search input to accept "United States" as an input to display USA data
+             
+         }
+         //hard coded the search input to accept "United States" as an input to display USA data            
          if (userInput.toUpperCase() === USA.toUpperCase()) {
              countryName.text(USA);
              countryCases.text("Confirmed Cases: " + covidObject[213].latest_data.confirmed);
@@ -357,7 +358,7 @@ function searchCovidCaseByCountry(userInput){
 
    
 }
-}
+
 
 function getCovidCases(){
 //ajax call to get covid API response
