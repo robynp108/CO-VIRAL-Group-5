@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<<<<<<< HEAD
     <style>
     .hero {
     background-image: url('./Assets/COVID19.jpg');
@@ -17,6 +20,52 @@
 </head>
 <section>
     <section class="hero is-medium has-bg-img has-text-white">
+=======
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>CO-VIRAL Home</title>
+</head>
+<section>
+    <section class="hero is-primary is-medium">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <span style="text-align: end;">CO-VIRAL: COVID-19</span>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">
+                                Home
+                            </a>
+                            <a class="navbar-item">
+                                What You Need to Know
+                            </a>
+                            <a class="navbar-item">
+                                Top Articles
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-primary is-inverted">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Resources</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+>>>>>>> master
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body has-text-right has-text-white">
@@ -41,32 +90,44 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">CDC</p>
-                        <p class="subtitle">TOP HEADLINE</p>
+                        <p class="subtitle" id="homeTitleCdc"> <a href="" target="_blank" id="cdcLink">TOP HEADLINE</a></p>
                         <div class="content">
+<<<<<<< HEAD
                             <p>Article snippet.</p>
                             <a href='https://www.cdc.gov/coronavirus/2019-ncov/index.html' type="button"
                                 class="button is-primary is-light is-medium"><b>Go to CDC.gov</b></a>
+=======
+                            <p id="homeSummaryCdc">Article snippet.</p>
+>>>>>>> master
                         </div>
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">WHO</p>
-                        <p class="subtitle">TOP HEADLINE</p>
+                        <p class="subtitle" id="homeTitleWho"> <a href="" target="_blank" id="whoLink">TOP HEADLINE</a></p>
                         <div class="content">
+<<<<<<< HEAD
                             <p>Article snippet.</p>
                             <a href='https://www.who.int/health-topics/coronavirus#tab=tab_1' type="button"
                                 class="button is-primary is-light is-medium"><b>Go to WHO.int</b></a>
+=======
+                            <p id="homeSummaryWho">Article snippet.</p>
+>>>>>>> master
                         </div>
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title">NIH</p>
-                        <p class="subtitle">TOP HEADLINE</p>
+                        <p class="subtitle" id="homeTitleNih"> <a href="" target="_blank" id="nihLink">TOP HEADLINE</a></p>
                         <div class="content">
+<<<<<<< HEAD
                             <p>Article snippet.</p>
                             <a href='https://www.nih.gov/health-information/coronavirus' type="button" class="button is-primary is-light is-medium"><b>Go to NIH.gov</b></a>
+=======
+                            <p id="homeSummaryNih">Article snippet.</p>
+>>>>>>> master
                         </div>
                     </article>
                 </div>
@@ -95,12 +156,21 @@
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
+<<<<<<< HEAD
                                 <p class="title">VIRAL MEMES</p>
                                 <p class="subtitle">A DOSE OF MEMES TO BRIGHTEN YOUR DAY</p>
                                 <figure class="image is-4by3">
                                     <img src="./Assets/OJCOVID-19.png"></img>
+=======
+                                <p class="title">Quarantine Meme</p>
+                                <p class="subtitle">(We shouldn't forget to laugh!))</p>
+                                <figure class="image is-4by3 meme">
+                    
+>>>>>>> master
                                 </figure>
+                                <img src="./Assets/tenorLogo.png" alt="Tenor logo" style="width:100px;height:25px"/>
                             </article>
+                            
                         </div>
                     </div>
                     <div class="tile is-parent">
@@ -185,6 +255,7 @@
             </div>
         </section>
 
+<<<<<<< HEAD
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
@@ -196,5 +267,13 @@
         </div>
     </footer>
     </body>
+=======
+        </section>
+    </section>
+</section>
+<script src="NewsAPI.js"></script>
+<script src="meme.js"></script>
+</body>
+>>>>>>> master
 
 </html>
