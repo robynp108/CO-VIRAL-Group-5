@@ -305,7 +305,7 @@ $(document).ready(function(){
     var userInput = countryInput.val();
     
    searchCovidCaseByCountry(userInput);
-   barChart(userInput);
+//    barChart(userInput);
    countryInput.val("");
 })
 
@@ -315,7 +315,7 @@ countryInput.keypress(function (e) {
         var userInput = countryInput.val();
     
         searchCovidCaseByCountry(userInput);
-        barChart(userInput);
+        // barChart(userInput);
         countryInput.val("");
     }
   });
@@ -403,8 +403,9 @@ $.ajax({
             ["Smallpox 1520", 56000000],
             ["Spanish Flu 1918-1919", 50000000],
             ["Hong Kong Flu 1968-1970", 1000000],
-            ["Covid-19 Pandmeic 2020-?", globalDeaths],
+            ["Avg. Flu Season (CDC estimate)", 468500],
             ["Swine Flu (H1N1)", 200000],
+            ["Covid-19 Pandmeic 2020-?", globalDeaths],
             ["SARS", 770]
 
             
@@ -419,7 +420,7 @@ $.ajax({
         chart.data(data);
     
             // set the chart title
-        chart.title("Pandemic Comparison");
+        chart.title("Death Toll Comparison");
         chart.container('container');
         chart.draw();
 
@@ -440,46 +441,46 @@ $.ajax({
              //dynamically create new rows after user inputs a country
                         //bar chart
 
-function barChart(userInput){
-    anychart.onDocumentReady(function() {
+// function barChart(userInput){
+//     anychart.onDocumentReady(function() {
   
         
-        // the code to create a chart will be here
-        var data = anychart.data.set([
-            {country, deaths},
+//         // the code to create a chart will be here
+//         var data = anychart.data.set([
+//             {country, deaths},
            
-        ]);
-        console.log(data);
+//         ]);
+//         console.log(data);
     
-            // create the chart
-        var chart = anychart.bar();
+//             // create the chart
+//         var chart = anychart.bar();
         
-        // add the data
-        chart.data(data);
+//         // add the data
+//         chart.data(data);
     
-            // set the chart title
-        chart.title("Deaths by Country");
-        chart.container('container');
-        chart.draw();
+//             // set the chart title
+//         chart.title("Deaths by Country");
+//         chart.container('container');
+//         chart.draw();
 
         
-        for (var i = 0; i < covidObject.length; i++){
-            //  console.log(covidObject[i].name);
-             var country = covidObject[i].name;
-             var deaths = covidObject[i].latest_data.deaths;
+//         for (var i = 0; i < covidObject.length; i++){
+//             //  console.log(covidObject[i].name);
+//              var country = covidObject[i].name;
+//              var deaths = covidObject[i].latest_data.deaths;
            
       
             
-        if (userInput.toUpperCase() === country.toUpperCase()){
-            data.append(
-                {country, deaths},
+//         if (userInput.toUpperCase() === country.toUpperCase()){
+//             data.append(
+//                 {country, deaths},
                
-            );
-        }
-    }  
- })
+//             );
+//         }
+//     }  
+//  })
     
-}
+// }
 
 
 
