@@ -16,6 +16,7 @@ var countryCases = $("#countryCases");
 var countryDeaths = $("#countryDeaths");
 var countryCritical = $("#countryCritical");
 var countryRecovered = $("#countryRecovered");
+var compareChart = $("#countryChart");
 var USA = "United States"
 var allCountries = [ 
     {"name": "Afghanistan", "code": "AF"}, 
@@ -304,6 +305,7 @@ $(document).ready(function(){
     var userInput = countryInput.val();
     
    searchCovidCaseByCountry(userInput);
+//    barChart(userInput);
    countryInput.val("");
 })
 
@@ -313,6 +315,7 @@ countryInput.keypress(function (e) {
         var userInput = countryInput.val();
     
         searchCovidCaseByCountry(userInput);
+        // barChart(userInput);
         countryInput.val("");
     }
   });
@@ -326,13 +329,16 @@ function searchCovidCaseByCountry(userInput){
     for (var i = 0; i < covidObject.length; i++){
         //  console.log(covidObject[i].name);
          var country = covidObject[i].name;
+         
          if (userInput.toUpperCase() === country.toUpperCase()){
-             countryName.append("h2");
              countryName.text(country);
              countryCases.text("Confirmed Cases: " + covidObject[i].latest_data.confirmed);
              countryDeaths.text("Total Deaths: " + covidObject[i].latest_data.deaths);
              countryCritical.text("Critical Cases: " + covidObject[i].latest_data.critical);
              countryRecovered.text("People Recovered: " + covidObject[i].latest_data.recovered);
+           
+
+
              
              
          }
@@ -344,14 +350,15 @@ function searchCovidCaseByCountry(userInput){
              countryCritical.text("Critical Cases: " + covidObject[213].latest_data.critical);
              countryRecovered.text("People Recovered: " + covidObject[213].latest_data.recovered);
         }
-         
-
-       
     
-       
+        
     }
+
+
+
    
 }
+
 
 function getCovidCases(){
 //ajax call to get covid API response
@@ -377,6 +384,7 @@ $.ajax({
     console.log(globalDeaths);
     console.log(globalCritical);
     console.log(globalRecovered);
+    
 
     //appends covid data to DOM
     cases.append("Confirmed Cases: " + globalCases);
@@ -384,11 +392,97 @@ $.ajax({
     critical.append("Critical Cases: " + globalCritical);
     recovered.append("People Recovered: " + globalRecovered);
 
+
+    //pandemic comparison:
+
+    anychart.onDocumentReady(function() {
+  
+        
+        // the code to create a chart will be here
+        var data = [
+            ["Black Death 1347-1351", 200000000],
+            ["Smallpox 1520", 56000000],
+            ["Spanish Flu 1918-1919", 50000000],
+            ["Hong Kong Flu 1968-1970", 1000000],
+            ["Avg. Flu Season (CDC estimate)", 468500],
+            ["Swine Flu (H1N1)", 200000],
+            ["Covid-19 Pandmeic 2020-?", globalDeaths],
+            ["SARS", 770]
+
+            
+           
+        ];
+        console.log(data);
     
+            // create the chart
+        var chart = anychart.bar();
+        
+        // add the data
+        chart.data(data);
     
+            // set the chart title
+        chart.title("Death Toll Comparison");
+        chart.container('container');
+        chart.draw();
+
+        
+ 
+    })
+    
+    })
+
 
     
-})
-
 
 }
+
+
+             //set LocalStorage??
+             //get local storage?
+             //dynamically create new rows after user inputs a country
+                        //bar chart
+
+// function barChart(userInput){
+//     anychart.onDocumentReady(function() {
+  
+        
+//         // the code to create a chart will be here
+//         var data = anychart.data.set([
+//             {country, deaths},
+           
+//         ]);
+//         console.log(data);
+    
+//             // create the chart
+//         var chart = anychart.bar();
+        
+//         // add the data
+//         chart.data(data);
+    
+//             // set the chart title
+//         chart.title("Deaths by Country");
+//         chart.container('container');
+//         chart.draw();
+
+        
+//         for (var i = 0; i < covidObject.length; i++){
+//             //  console.log(covidObject[i].name);
+//              var country = covidObject[i].name;
+//              var deaths = covidObject[i].latest_data.deaths;
+           
+      
+            
+//         if (userInput.toUpperCase() === country.toUpperCase()){
+//             data.append(
+//                 {country, deaths},
+               
+//             );
+//         }
+//     }  
+//  })
+    
+// }
+
+
+
+

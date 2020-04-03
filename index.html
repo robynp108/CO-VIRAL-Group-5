@@ -16,35 +16,23 @@
     section {
         background-color: white;
     }
+    .streetSmarts {
+        width: 95%;
+        height: 100%;
+    }
+
+    .videos {
+        height: 50vh;
+        width: 75vw;
+    }
 
     </style>
     <title>CO-VIRAL Home</title>
 </head>
+
+
 <section>
-    <section class="hero is-medium has-bg-img has-text-white">
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>CO-VIRAL Home</title>
-</head>
-<section>
-    <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <span style="text-align: end;">CO-VIRAL: COVID-19</span>
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    <section class="hero is-info is-medium">
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body has-text-right has-text-white">
@@ -141,6 +129,12 @@
                                 <figure class="image is-4by3" class="meme">
                                 </figure>
                                 <img src="./Assets/tenorLogo.png" alt="Tenor logo" style="width:100px;height:25px"/>
+                                <figure class="image is-4by3 meme">
+                                </figure>
+                                <img src="./Assets/tenorLogo.png" alt="Tenor logo" style="width:100px;height:25px" />
+                                <figure class="image is-4by3 meme">
+                                </figure>
+                                <img src="./Assets/tenorLogo.png" alt="Tenor logo" style="width:100px;height:25px" />
                             </article>
 
                         </div>
@@ -169,6 +163,7 @@
                                 <p>CO-VIRAL and chill. Remember, we can only "defeat" COVID-19 by collaborating and
                                     cooperating with eachother. Our app is your starting point and one-stop guide to
                                     everything COVID-19.</p>
+                                    <br>
                                     <a href='./whatyouneedtoknow.html' type="button" class="button is-primary is-light is-medium"><b>FACTS</b></a>
                             </div>
                         </article>
@@ -180,10 +175,36 @@
                         <div class="content">
                             <p class="title">STREET SMARTS</p>
                             <p class="subtitle">QUICK FACTS RE COVID-19</p>
+                            <hr>
                             <div class="content">
-                                <iframe src="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" name="CDC" style="height:1400px; width:300px"></iframe><a
+                                <p><b>CDC</b></p>
+                                <hr>
+                                <iframe class="streetSmarts" src="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" name="CDC"></iframe><a
                                     href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="CDC"></a>
+                                    <br>
+                                    <hr>
+
+                                    <iframe class="streetSmarts" src="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" name="CDC FAQ"></iframe><a
+                                        href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="CDC FAQ"></a>
                                 <br>
+                                <hr>
+                                <p><b>WHITEHOUSE.gov</b></p>
+                                <hr>
+                                <iframe class="streetSmarts" src="./Assets/WhiteHouseGuidelines.pdf" name="White House"></iframe><a
+                                    href="./Assets/WhiteHouseGuidelines.pdf" target="White House"></a>
+                                <br>
+                                <hr>
+                                <p><b>JOHNS HOPKINS</b></p>
+                                <hr>
+                                <iframe class="streetSmarts" src="https://coronavirus.jhu.edu/" name="Johns Hopkins"></iframe><a href="https://coronavirus.jhu.edu/"
+                                    target="Johns Hopkins"></a>
+                                <br>
+                                <hr>
+                                <p><b>WHO</b></p>
+                                <hr>
+                                <iframe class="streetSmarts" src="https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus/en/" name="WHO"></iframe><a href="https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus/en/" target="WHO"></a>
+                                <br>
+                                <hr>
                                 <a href='whatyouneedtoknow.html' type="button" class="button is-primary is-light is-medium"><b>What you need to know</b></a>
                             </div>
                         </div>
@@ -202,7 +223,7 @@
                         <div class="content">
                             <p>What is a coronavirus? Why is it named COVID-19? What you need to know from the CDC</p>
                         </div>
-                        <iframe width="640px" height="360px" src="https://www.youtube.com/embed/5DGwOJXSxqg" frameborder="0"
+                        <iframe class="videos" src="https://www.youtube.com/embed/5DGwOJXSxqg" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
 
@@ -215,7 +236,7 @@
                         <p class="subtitle">Your update straight from leading medical experts</p>
                         <div class="content">
                             <p>A closer look at the virion that causes COVID-19</p>
-                            <iframe width="640px" height="500px" src="https://www.youtube.com/embed/sHP0UIdZyI4"
+                            <iframe class="videos" src="https://www.youtube.com/embed/sHP0UIdZyI4"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
