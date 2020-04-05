@@ -33,5 +33,8 @@ https://robynp108.github.io/CO-VIRAL-Group-5/
 
 ## Screenshot
 
-![COVIRAL home page image](image.jpg)
+![COVIRAL Home image](HomePageScreenshot.PNG)
 
+--
+
+![COVIRAL Mobile image](HomeMobile.PNG)
