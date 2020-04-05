@@ -37,13 +37,4 @@ https://robynp108.github.io/CO-VIRAL-Group-5/
 
 --
 
-![COVIRAL WYNTK image](WYNTKScreenshot.PNG)
-
---
-
-![COVIRAL Data image](DataScreenshot.PNG)
-
---
-
-![COVIRAL News image](NewsScreenshot.PNG)
-
+![COVIRAL Mobile image](HomeMobile.PNG)
